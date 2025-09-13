@@ -17,9 +17,9 @@ if (window.location.hash == '#child') {
   window.open('/#child');
 
   // Go back to previous note page
-  //sleep(100).then(() => {
-  //  window.history.back();
-  //});
+  sleep(100).then(() => {
+    window.history.back();
+  });
 };
 
 /*
