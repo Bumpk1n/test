@@ -15,7 +15,7 @@ if (window.location.hash == '#child') {
 
   // Go back to previous note page
   sleep(500).then(() => {
-    window.history.go(-3);
+    window.history.go(-2);
   });
 };
 
